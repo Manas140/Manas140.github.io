@@ -1,0 +1,213 @@
+@font-face {
+  font-family: Font;
+  src: url(static/google-bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    font-family: Font;
+}
+a{
+    color: #e3ab9a;
+    transition: 0.5s ease;
+}
+a:hover{
+    color: #F5E1DA;
+}
+
+.bg {
+    background-image: url("static/bg1.jpg");
+    height: 100vh;
+    width: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+}
+.icon{
+    position: absolute;
+    height: 100px;
+    width: auto;
+    align-self: center;
+    border-radius: 100%;
+}
+
+.name{
+    position: absolute;
+    color: white;
+    align-self: center;
+    margin-top: 180px;
+}
+.discription{
+    position: absolute;
+    color: white;
+    align-self: center;
+    margin-top: 250px;
+}
+.btn{
+    align-self: center;
+    margin-top: 325px;
+    padding: 10px 20px;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+}
+.btn:hover{
+    color: white;
+    padding: 15px 25px;
+    background-color: rgba(0,0,0,0.7);
+}
+.midsep{
+    height: 10px;
+    background-color: rgba(37, 91, 64, 0.9);
+}
+.projects{
+    height: 100vh;
+    width: auto;
+
+    /* keep image */
+    background-image: url("static/bg3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color:#242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-header{
+    color: white;
+    position: absolute;
+    margin-bottom: 500px;
+}
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    color: black;
+    margin: auto;
+    column-gap: 10px;
+}
+
+.card{
+    box-shadow:0 5px 10px 0 rgba(0,0,0,0.7);
+    margin: 25px;
+    padding: 50px;
+    border-radius: 10%;
+    text-align: center;
+    transition: 0.5s ease;
+    max-width: 150px;
+    min-width: 150px;
+    background-color: rgba(0,0,0,0.2);
+}
+.card:hover{
+    box-shadow:0 5px 10px 0 rgba(0,0,0,1);
+    margin: 15px;
+    padding: 60px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.card-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.card-txt{
+    margin-top: 20px;
+    color: white;
+}
+.card-p{
+    margin-top: 10px;
+    color: white;
+    word-wrap: break-word;
+}
+.footer{
+    height: 20vh;
+    width: auto;
+
+    /* keep image */
+    /* background-image: url("static/bg3.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color:#242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 1200px) {
+    .card-deck {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .project-header{
+        color: white;
+        position: absolute;
+        margin-bottom: 620px;
+    }
+    .projects{
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .card-deck {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .project-header{
+        color: white;
+        position: absolute;
+        margin-bottom: 625px;
+    }
+    .projects{
+        height: auto;
+    }
+    .bg{
+        height: 150vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .card-deck {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .project-header{
+        color: white;
+        position: absolute;
+        margin-bottom: 1250px;
+    }
+    .projects{
+        height: auto;
+    }
+    .bg{
+        height: 120vh;
+    }
+
+}
+
+
+
+
