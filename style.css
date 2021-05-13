@@ -135,7 +135,6 @@ a:hover{
 .footer{
     height: 20vh;
     width: auto;
-
     /* keep image */
     /* background-image: url("static/bg3.png"); */
     background-position: center;
@@ -158,12 +157,11 @@ a:hover{
     .project-header{
         color: white;
         position: absolute;
-        margin-bottom: 620px;
+        margin-bottom: 720px;
     }
     .projects{
         height: auto;
     }
-
 }
 
 @media only screen and (max-width: 950px) {
@@ -177,7 +175,7 @@ a:hover{
     .project-header{
         color: white;
         position: absolute;
-        margin-bottom: 625px;
+        margin-bottom: 720px;
     }
     .projects{
         height: auto;
@@ -197,7 +195,7 @@ a:hover{
     .project-header{
         color: white;
         position: absolute;
-        margin-bottom: 1250px;
+        margin-bottom: 1470px;
     }
     .projects{
         height: auto;
@@ -205,9 +203,4 @@ a:hover{
     .bg{
         height: 120vh;
     }
-
 }
-
-
-
-
