@@ -69,7 +69,7 @@ a:hover{
     background-color: rgba(37, 91, 64, 0.9);
 }
 .projects{
-    height: 100vh;
+    height: 90vh;
     width: auto;
 
     /* keep image */
@@ -133,8 +133,9 @@ a:hover{
     word-wrap: break-word;
 }
 .footer{
-    height: 20vh;
+    height: 10vh;
     width: auto;
+
     /* keep image */
     /* background-image: url("static/bg3.png"); */
     background-position: center;
@@ -162,6 +163,7 @@ a:hover{
     .projects{
         height: auto;
     }
+
 }
 
 @media only screen and (max-width: 950px) {
@@ -203,4 +205,5 @@ a:hover{
     .bg{
         height: 120vh;
     }
+
 }
