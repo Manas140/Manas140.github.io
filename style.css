@@ -1,6 +1,6 @@
 @font-face {
   font-family: Font;
-  src: url(static/google-bold.ttf);
+  src: url(static/font-bold.ttf);
 }
 
 *{
@@ -207,3 +207,7 @@ a:hover{
     }
 
 }
+
+
+
+
