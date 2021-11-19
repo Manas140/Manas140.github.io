@@ -2,27 +2,46 @@
   font-family: Font;
   src: url("./ComicNeue-Bold.ttf");
 }
+:root {
+  --bg: #151515;
+  --fg: #d0d0d0;
+  --pr: #7d8677;
+  --al: #535f57;
+}
 *{
   padding: 0;
   margin: 0;
   text-decoration: none;
   transition: 0.5s ease;
   text-align: center;
-  color: #D8D8D8;
+  color: var(--pr);
   border-radius: 2vh;
   font-family: Font;
 }
-a {
-  color: #181818;
+p{
+  color: var(--fg);
+}
+a{
+  align-self: center;
+  color: var(--pr);
+}
+a:hover {
+  color: var(--al);
+}
+
+.card a{
+  align-self: center;
+  color: var(--bg);
   box-shadow:0 5px 10px 0 rgba(0,0,0,0.75);
-  background-color: #A1B56C;
+  background-color: var(--pr);
   border-radius: 2vh;
   padding: 2vh;
 }
-a:hover {
-  background-color: #7F8E57;
+.card a:hover {
+  background-color: var(--al);
+  transform: 10px;
 }
-body {
+body{
   background-image: url("./bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,14 +52,14 @@ body {
   padding: 5vh;
   min-height: 90vh;
 }
-img {
+img{
   height: 5rem;
   justify-self: center;
   margin: 2vh;
 }
 div {
   box-shadow:0 5px 10px 0 rgba(0,0,0,0.75);
-  background-color: #181818;
+  background-color: var(--bg);
   display: grid;
   grid-gap: 2vh;
   padding: 5vh;
@@ -48,7 +67,6 @@ div {
 .card-deck {
   box-shadow:0 0 0 0 rgba(0,0,0,0);
   background-color: rgba(0,0,0,0);
-  grid-template-rows: repeat(3, 1fr);
   grid-gap: 5vh;
   padding: 0;
 }
