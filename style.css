@@ -1,82 +1,85 @@
 @font-face {
   font-family: Font;
-  src: url("./ComicNeue-Bold.ttf");
+  src: url("./ShareTechMono-Regular.ttf");
 }
 :root {
   --bg: #151515;
-  --fg: #d0d0d0;
-  --pr: #7d8677;
-  --al: #535f57;
+  --gg: #151515;
+  --fg: #E8E3E3;
+  --pr: #8C977D;
+  --al: #69715E;
 }
 *{
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  transition: 0.5s ease;
-  text-align: center;
-  color: var(--pr);
-  border-radius: 2vh;
   font-family: Font;
-}
-p{
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
   color: var(--fg);
+  background-color: var(--bg);
+  margin: 0;
+  transition: ease .5s;
+  border-radius: .25em;
+}
+body{
+  margin: 1em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 4fr 1fr;
+  min-height: 95vh;
+}
+img{
+  height: 7em;
+  justify-self: center;
 }
 a{
-  align-self: center;
   color: var(--pr);
 }
 a:hover {
   color: var(--al);
 }
-
-.card a{
-  align-self: center;
-  color: var(--bg);
-  box-shadow:0 5px 10px 0 rgba(0,0,0,0.75);
-  background-color: var(--pr);
-  border-radius: 2vh;
-  padding: 2vh;
+button{
+  transform: scale(1);
+  padding: 0.75em;
+  justify-self: right;
+  position: absolute;
+  border-radius: 50%;
+  border: solid 0.25em;
+  border-color: var(--fg);
 }
-.card a:hover {
-  background-color: var(--al);
-  transform: 10px;
+h1, h2{
+  color: var(--pr);
 }
-body{
-  background-image: url("./bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+p{
+  color: var(--fg);
+}
+div{
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 5vh;
-  padding: 5vh;
-  min-height: 90vh;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+  padding: 1em;
+  grid-gap: 1em;
 }
-img{
-  height: 5rem;
-  justify-self: center;
-  margin: 2vh;
-}
-div {
-  box-shadow:0 5px 10px 0 rgba(0,0,0,0.75);
-  background-color: var(--bg);
-  display: grid;
-  grid-gap: 2vh;
-  padding: 5vh;
-}
-.card-deck {
-  box-shadow:0 0 0 0 rgba(0,0,0,0);
-  background-color: rgba(0,0,0,0);
-  grid-gap: 5vh;
+.card-deck{
   padding: 0;
+  box-shadow: none;
+  display: grid;
+  grid-gap: 1em;
 }
-.card {
-  padding: 2vh;
-  grid-template-rows: 1fr 2fr 2fr;
+.card{
+  padding: 1em;
+  grid-gap: 1em;
+  display: grid;
+}
+.card a{
+  background-color: var(--pr);
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25);
+  padding: 1em;
+  color: var(--gg);
+}
+.card a:hover{
+  background-color: var(--al);
 }
 @media only screen and (max-width: 800px) {
-  body {
-    display: grid;
+  body{
     grid-template-columns: 1fr;
   }
 }
