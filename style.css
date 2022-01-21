@@ -4,82 +4,79 @@
 }
 :root {
   --bg: #151515;
-  --gg: #151515;
   --fg: #E8E3E3;
-  --pr: #8C977D;
-  --al: #69715E;
+  --pr: #69715E;
+  --al: #464C3F;
 }
-*{
+* {
   font-family: Font;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
+  text-align: left;
   color: var(--fg);
-  background-color: var(--bg);
   margin: 0;
-  transition: ease .5s;
-  border-radius: .25em;
+  transition: ease 1s;
+  border: none;
+  font-weight: bold;
 }
-body{
-  margin: 1em;
+body, div{
   display: grid;
+}
+body {
+  border-radius: .5em;
+  margin: 5vh;
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25);
+  min-height: 90vh;
+  background-color: var(--bg);
+  grid-template-columns: 1fr 1fr;
+}
+div {
+  padding: 2.5em;
   grid-gap: 1em;
-  grid-template-columns: 4fr 1fr;
-  min-height: 95vh;
+  align-content: center;
 }
-img{
-  height: 7em;
+img {
+  border-radius: 100%;
+  align-self: center;
   justify-self: center;
+  height: 20em;
+  margin: 1em;
 }
-a{
+h1, h2, a {
   color: var(--pr);
 }
 a:hover {
   color: var(--al);
 }
-button{
-  transform: scale(1);
-  padding: 0.75em;
-  justify-self: right;
+button, .toggle{
   position: absolute;
-  border-radius: 50%;
-  border: solid 0.25em;
+  align-self: top;
+  justify-self: right;
+  margin: 1.5em;
+  border-radius: 100%;
+  padding: .75em;
+}
+button {
+  transform: scale(1);
+  border: solid .25em;
+  background-color: var(--bg);
   border-color: var(--fg);
 }
-h1, h2{
-  color: var(--pr);
+.toggle {
+  transition: ease 0s;
+  transform: scale(0);
+  z-index: -1;
+  background-color: var(--fg);
 }
-p{
-  color: var(--fg);
-}
-div{
-  display: grid;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
-  padding: 1em;
-  grid-gap: 1em;
-}
-.card-deck{
-  padding: 0;
-  box-shadow: none;
-  display: grid;
-  grid-gap: 1em;
-}
-.card{
-  padding: 1em;
-  grid-gap: 1em;
-  display: grid;
-}
-.card a{
-  background-color: var(--pr);
-  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25);
-  padding: 1em;
-  color: var(--gg);
-}
-.card a:hover{
-  background-color: var(--al);
+.toggled {
+  transition: ease-in 1s;
+  transform: scale(250);
+  background-color: var(--bg);
+  opacity: 0;
 }
 @media only screen and (max-width: 800px) {
   body{
     grid-template-columns: 1fr;
+  }
+  img{
+    display: none;
   }
 }

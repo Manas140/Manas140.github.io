@@ -12,6 +12,7 @@ if (localStorage.getItem("bg") === null && localStorage.getItem("fg") === null) 
 }
 
 function toggle() {
+  var t = document.querySelector(".toggle");
   var rs = getComputedStyle(r);
   bg = rs.getPropertyValue('--bg');
   fg = rs.getPropertyValue('--fg');
@@ -19,6 +20,10 @@ function toggle() {
   r.style.setProperty('--fg', bg);
   localStorage.setItem("bg", fg);
   localStorage.setItem("fg", bg);
+  t.classList.add("toggled");
+  t.addEventListener('transitionend', function() {
+    t.classList.remove("toggled");
+  })
 }
 
 function load() {
