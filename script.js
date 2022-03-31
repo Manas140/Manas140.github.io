@@ -1,8 +1,9 @@
 var r = document.querySelector(':root');
+var rs = getComputedStyle(r);
 const button = document.querySelector(".toggle-btn");
 button.addEventListener("click", toggle);
 
-if (localStorage.getItem("bg") === null && localStorage.getItem("fg") === null) {
+if (localStorage.getItem("al") === null && localStorage.getItem("bg") === null && localStorage.getItem("fg") === null) {
   bg = rs.getPropertyValue('--bg');
   fg = rs.getPropertyValue('--fg');
 } else {
@@ -13,17 +14,12 @@ if (localStorage.getItem("bg") === null && localStorage.getItem("fg") === null) 
 
 function toggle() {
   var t = document.querySelector(".toggle");
-  var rs = getComputedStyle(r);
   bg = rs.getPropertyValue('--bg');
   fg = rs.getPropertyValue('--fg');
   r.style.setProperty('--bg', fg);
   r.style.setProperty('--fg', bg);
   localStorage.setItem("bg", fg);
   localStorage.setItem("fg", bg);
-  t.classList.add("toggled");
-  t.addEventListener('transitionend', function() {
-    t.classList.remove("toggled");
-  })
 }
 
 function load() {

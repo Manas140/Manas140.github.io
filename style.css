@@ -1,35 +1,32 @@
 @font-face {
   font-family: Font;
-  src: url("./ShareTechMono-Regular.ttf");
+  src: url("./JetBrainsMono-Medium.ttf");
 }
 :root {
   --bg: #151515;
   --fg: #E8E3E3;
-  --pr: #69715E;
-  --al: #464C3F;
+  --pr: #848379;
+  --al: #63625B;
 }
 * {
   font-family: Font;
   text-align: left;
+  text-decoration: none;
   color: var(--fg);
   margin: 0;
   transition: ease 1s;
   border: none;
-  font-weight: bold;
 }
 body, div{
   display: grid;
 }
 body {
-  border-radius: .5em;
-  margin: 5vh;
-  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25);
+  margin: 2em;
   min-height: 90vh;
   background-color: var(--bg);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
 }
 div {
-  padding: 2.5em;
   grid-gap: 1em;
   align-content: center;
 }
@@ -38,41 +35,26 @@ img {
   align-self: center;
   justify-self: center;
   height: 20em;
-  margin: 1em;
 }
+
 h1, h2, a {
   color: var(--pr);
 }
 a:hover {
   color: var(--al);
 }
-button, .toggle{
+button {
+  border-radius: 100%;
   position: absolute;
   align-self: top;
   justify-self: right;
-  margin: 1.5em;
-  border-radius: 100%;
-  padding: .75em;
+  padding: 1em;
+  background-color: var(--al);
 }
-button {
-  transform: scale(1);
-  border: solid .25em;
-  background-color: var(--bg);
-  border-color: var(--fg);
+button:hover {
+  background-color: var(--pr);
 }
-.toggle {
-  transition: ease 0s;
-  transform: scale(0);
-  z-index: -1;
-  background-color: var(--fg);
-}
-.toggled {
-  transition: ease-in 1s;
-  transform: scale(250);
-  background-color: var(--bg);
-  opacity: 0;
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   body{
     grid-template-columns: 1fr;
   }
