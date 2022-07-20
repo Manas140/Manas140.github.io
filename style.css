@@ -1,64 +1,107 @@
+:root {
+  --bg: #121212;
+  --ab: #181818;
+  --fg: #E8E3E3;
+  --af: #747272;
+}
+
 @font-face {
   font-family: Font;
   src: url("./JetBrainsMono-Medium.ttf");
 }
-:root {
-  --bg: #151515;
-  --fg: #E8E3E3;
-  --pr: #848379;
-  --al: #63625B;
-}
+
 * {
-  font-family: Font;
-  text-align: left;
-  text-decoration: none;
-  color: var(--fg);
   margin: 0;
-  transition: ease 1s;
-  border: none;
-}
-body, div{
-  display: grid;
-}
-body {
-  margin: 2em;
-  min-height: 90vh;
-  background-color: var(--bg);
-  grid-template-columns: 2fr 3fr;
-}
-div {
-  grid-gap: 1em;
-  align-content: center;
-}
-img {
-  border-radius: 100%;
-  align-self: center;
-  justify-self: center;
-  height: 20em;
+  padding: 0;
+  font-family: Font;
+  transition: 0.5s ease;
+  text-decoration: none;
+  border-radius: 0.2em;
 }
 
-h1, h2, a {
-  color: var(--pr);
+body {
+  background-color: var(--bg);
+  margin: 20vh 15vw;
 }
+
+h1 {
+  text-align: center; 
+}
+
+h1, h3 {
+  color: var(--fg);
+}
+
+p {
+  color: var(--af);
+}
+
+section {
+  display: grid;
+  grid-gap: 2em;
+}
+
+.main {
+  text-align: left;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+/* Nav */
+nav {
+  text-align: center;
+  grid-gap: 2em;
+  padding: 1em 0;
+  justify-content: center;
+  align-content: center;
+}
+
+a {
+  color: var(--af);
+}
+
 a:hover {
-  color: var(--al);
+  color: var(--fg);
 }
-button {
-  border-radius: 100%;
-  position: absolute;
-  align-self: top;
-  justify-self: right;
+
+nav a {
   padding: 1em;
-  background-color: var(--al);
 }
-button:hover {
-  background-color: var(--pr);
+
+.active {
+  color: var(--fg)
 }
-@media only screen and (max-width: 1000px) {
-  body{
+
+/* Projects */
+.projects {
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects a {
+  padding: 0;
+  color: none;
+}
+
+div {
+  display: grid;
+  grid-gap: 0.5em;
+  padding: 2em;
+  background-color: var(--ab);
+}
+
+.socials {
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 10vh 10vw;
+  }
+  .projects {
     grid-template-columns: 1fr;
-  }
-  img{
-    display: none;
-  }
+  } 
 }
