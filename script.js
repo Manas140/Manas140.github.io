@@ -25,3 +25,6 @@ fetch(repos)
       i++;
     }
   })
+
+const age = document.querySelector(".age");
+age.textContent = `${((new Date()-new Date("2007-04-01"))/31557600000).toFixed(0)}`
