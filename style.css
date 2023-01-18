@@ -3,6 +3,7 @@
   --ab: #151515;
   --fg: #D8D3D3;
   --af: #747272;
+  --pr: #d8d3d3;
 }
 
 @font-face {
@@ -14,9 +15,10 @@
   margin: 0;
   padding: 0;
   font-family: Font;
-  transition: 1s ease;
+  transition: 0.5s ease;
   text-decoration: none;
   border-radius: 0.2em;
+  font-weight: bold;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 
 h2 {
   text-align: center;
-  color: var(--fg);
+  color: var(--pr);
   padding-bottom: 1em;
 }
 
@@ -48,7 +50,7 @@ section {
 }
 
 .active {
-  color: var(--fg);
+  color: var(--pr);
 }
 
 li {
@@ -67,11 +69,12 @@ p {
 }
 
 a {
+  font-style: bold;
   color: var(--af);
 }
 
-a:hover {
-  color: var(--fg);
+a:hover, b {
+  color: var(--pr);
 }
 
 .projects {
@@ -82,13 +85,18 @@ a:hover {
 }
 
 .projects div {
+  /* border-top : 1em solid var(--pr); */
   background-color: var(--ab);
   padding: 2em;
 }
 
+.projects div:hover {
+  transform: translate(-0em, -.25em)
+}
+
 h3 {
   padding-bottom: 1em;
-  color: var(--fg);
+  color: var(--pr);
 }
 
 @media screen and (max-width: 800px) {
