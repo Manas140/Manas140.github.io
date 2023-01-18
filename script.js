@@ -1,12 +1,6 @@
 var projects = document.querySelector('.projects')
 const repos = 'https://api.github.com/users/Manas140/repos';
-const api = 'https://api.github.com/users/Manas140';
-
-fetch(api)
-  .then(res => res.json())
-  .then(data => {
-    var followers = data.followers;
-  })
+const api = 'https://api.github.com/users/Manas140'
 
 fetch(repos)
   .then(res => res.json())
