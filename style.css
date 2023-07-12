@@ -3,7 +3,6 @@
   --ab: linear-gradient(to bottom right, #1a1a1a, #151515);
   --hw: linear-gradient(to bottom right, #1f1f1f, #1a1a1a);
   --fg: #c8c3c3;
-  --af: #747272;
   --pr: #e8e3e3;
 }
 
@@ -18,8 +17,25 @@
   padding: 0;
   font-family: Font;
   text-decoration: none;
-  border-radius: 0.2em;
   color: var(--fg);
+}
+
+.material-symbols-rounded {
+  vertical-align: bottom;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body {
@@ -39,31 +55,18 @@ main {
   padding: 5em 0;
 }
 
-.material-symbols-rounded {
-  vertical-align: bottom;
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 300,
-  'GRAD' 0,
-  'opsz' 48
+h1, h2, h3 {
+  color: var(--pr);
 }
 
+p, li, a {
+  font-size: medium;
+}
+
+/* Info */
 .info {
   display: flex;
   gap: 2em;
-}
-
-.info div {
-  display: flex; 
-  flex-direction: column;
-  gap: 1em;
-  justify-content: space-between;
-}
-
-.tags {
-  display: flex;
-  gap: 1em;
-  list-style-type: none;
 }
 
 img {
@@ -71,36 +74,37 @@ img {
   border-radius: 1em;
 }
 
+.info div, .tags {
+  display: flex;
+  gap: 1em;
+}
+
+.info div {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tags {
+  list-style-type: none;
+}
+
 main > p {
+  margin-top: -1em;
   width: 75%;
 }
 
-.projects {
+/* Projects  */
+.projects, .cards {
   display: grid;
   gap: 2em;
 }
 
 .cards {
-  display: grid; 
   grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
 }
 
-h1, h2, h3 {
-  color: var(--pr);
-}
-
-span {
+span { 
   color: #D9BC8C;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 article, .socials a {
@@ -108,17 +112,21 @@ article, .socials a {
 }
 
 article {
-  text-transform: capitalize;
   display: flex;
   justify-content: flex-start;
+  
+  text-transform: capitalize;
   flex-direction: column;
+  
   gap: 1em;
+  
   border-radius: .5em;
   padding: 2em;
   background: var(--ab);
 }
 
-article > p, .tags li {
+/* Socials & Etc */
+article > p, .tags li, .socials a {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -141,7 +149,6 @@ article:hover, .socials a:hover {
   background: var(--ab);
   padding: .5em 1em;
   border-radius: 1em;
-  font-size: medium;
   -webkit-line-clamp: 1;
 }
 
@@ -157,4 +164,7 @@ article:hover, .socials a:hover {
 
 @media screen and (max-width: 550px) {
   .cards { grid-template-columns: 1fr; gap: 1em; }
+  .info { display: grid; gap: 1em; }
+  .socials { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .socials a { padding: 1em; text-align: center; border-radius: .5em;}
 }
