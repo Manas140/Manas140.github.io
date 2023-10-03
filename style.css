@@ -91,6 +91,7 @@ img {
 main > p {
   margin-top: -1em;
   width: 75%;
+  line-height: 1.5rem;
 }
 
 /* Projects  */
